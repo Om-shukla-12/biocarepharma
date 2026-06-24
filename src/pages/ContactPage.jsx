@@ -34,43 +34,7 @@ export default function ContactPage({ form, setForm, submitted, sending, sendErr
         <div className="container">
           <div className="contact-grid">
             {/* Contact Info */}
-            <motion.div
-              variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-              <h2 style={{ fontSize: 22, fontWeight: 800, color: "var(--dark)", marginBottom: 24 }}>
-                Get In Touch
-              </h2>
-              {[
-                { icon: "📍", title: "Address", info: "Plot no. PF/23, Near Acme Pharma,\nOpp. Teva Pharma, Sanand,\nAhmedabad – 382110, Gujarat, India." },
-                { icon: "📞", title: "Phone", info: "+91 9998108820" },
-                { icon: "✉️", title: "Email", info: "biocareformulation@gmail.com" },
-                { icon: "⏰", title: "Business Hours", info: "Mon – Sat: 9:00 AM – 6:00 PM IST" },
-              ].map((c, i) => (
-                <motion.div key={c.title} className="contact-item"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}>
-                  <div className="contact-icon">{c.icon}</div>
-                  <div>
-                    <div className="contact-title">{c.title}</div>
-                    <div className="contact-info">{c.info}</div>
-                  </div>
-                </motion.div>
-              ))}
-              <motion.div className="contact-buttons"
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}>
-                <a href="https://wa.me/919998108820?text=Hi+Biocare+Pharma,+I+want+to+enquire+about+your+products"
-                  target="_blank" rel="noreferrer" className="btn btn-whatsapp btn-sm">
-                  💬 WhatsApp
-                </a>
-                <a href="tel:+919998108820" className="btn btn-primary-outline btn-sm">
-                  📞 Call Us
-                </a>
-              </motion.div>
-            </motion.div>
+            
 
             {/* Inquiry Form */}
             <motion.div className="card contact-form"
@@ -124,6 +88,43 @@ export default function ContactPage({ form, setForm, submitted, sending, sendErr
                   </motion.div>
                 )}
               </form>
+            </motion.div>
+            <motion.div
+              variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+              <h2 style={{ fontSize: 22, fontWeight: 800, color: "var(--dark)", marginBottom: 24 }}>
+                Get In Touch
+              </h2>
+              {[
+                { icon: "📍", title: "Address", info: "Plot no. PF/23, Near Acme Pharma,\nOpp. Teva Pharma, Sanand,\nAhmedabad – 382110, Gujarat, India." },
+                { icon: "📞", title: "Phone", info: "+91 9998108820" },
+                { icon: "✉️", title: "Email", info: "biocareformulation@gmail.com" },
+                { icon: "⏰", title: "Business Hours", info: "Mon – Sat: 9:00 AM – 6:00 PM IST" },
+              ].map((c, i) => (
+                <motion.div key={c.title} className="contact-item"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}>
+                  <div className="contact-icon">{c.icon}</div>
+                  <div>
+                    <div className="contact-title">{c.title}</div>
+                    <div className="contact-info">{c.info}</div>
+                  </div>
+                </motion.div>
+              ))}
+              <motion.div className="contact-buttons"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}>
+                <a href="https://wa.me/919998108820?text=Hi+Biocare+Pharma,+I+want+to+enquire+about+your+products"
+                  target="_blank" rel="noreferrer" className="btn btn-whatsapp btn-sm">
+                  💬 WhatsApp
+                </a>
+                <a href="tel:+919998108820" className="btn btn-primary-outline btn-sm">
+                  📞 Call Us
+                </a>
+              </motion.div>
             </motion.div>
           </div>
         </div>

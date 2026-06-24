@@ -721,6 +721,11 @@ a.footer-contact-value:hover { opacity: 1; color: var(--accent); }
   .section-center { margin-bottom: 24px; }
   .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .category-card { padding: 18px 12px; border-radius: 10px; }
+  .categories-grid .category-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 5px);
+  }
   .category-card .icon { font-size: 28px; margin-bottom: 8px; }
   .category-card .name { font-size: 12px; }
 
